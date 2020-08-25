@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>mmin vreme</title>
+        <link rel="shortcut icon" href="images/fav_icon.png" type="image/x-icon">
+        <!-- Bulma Version 0.9.0-->
+        <link rel='stylesheet prefetch' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
+        <link rel="stylesheet" href="css/tabs.css">
+        <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="hero is-info">
+            <div class="tabs is-boxed is-left main-menu" id="nav">
+                <ul>
+                    <li data-target="pane-1" id="1" class="is-active">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-image"></i></span>
+                            <span>Trenutno stanje</span>
+                        </a>
+                    </li>
+                    <li data-target="pane-2" id="2">
+                        <a>
+                            <span class="icon is-small"><i class="fab fa-empire"></i></span>
+                            <span>Zadnjih 30 min</span>
+                        </a>
+                    </li>
+                    <li data-target="pane-3" id="3">
+                        <a>
+                            <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+                            <span>ALADIN</span>
+                        </a>
+                    </li>
+                    <li data-target="pane-4" id="4">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-film"></i></span>
+                            <span>Tekst napovedi</span>
+                        </a>
+                    </li>
+					<li data-target="pane-5" id="5">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-film"></i></span>
+                            <span>Strele</span>
+                        </a>
+                    </li>
+					<li data-target="pane-6" id="6">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-film"></i></span>
+                            <span>GEFS</span>
+                        </a>
+                    </li>
+                </ul>
+				<div class="is-right">
+				<ul>
+				 <li data-target="pane-7" id="7">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-image"></i></span>
+                            <span>O strani</span>
+                        </a>
+                    </li>
+				</ul>
+				</div>
+            </div>
+            <div class="tab-content">
+				<!-- Hiter pregled -->
+                <div class="tab-pane is-active" id="pane-1">
+                    <figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/observ/surface/graphic/weatherSat_si_pda.png" alt="Trenutno stanje" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/observ/radar/si0_zm_pda_latest.gif" alt="Padavine zadnje" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/observ/satellite/nwcsaf_ct_pda_latest.gif" alt="Oblacnost zadnje" class="cent">
+                    </figure>
+                </div>
+				
+				<!-- Hiter pregled animacije -->
+                <div class="tab-pane" id="pane-2">
+                    <figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/observ/radar/si0_zm_pda_anim.gif" alt="Padavine zadnje" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/observ/satellite/nwcsaf_ct_pda_anim.gif" alt="Oblacnost zadnje" class="cent">
+                    </figure>
+                </div>
+				
+				<!-- ALADIN -->
+                <div class="tab-pane" id="pane-3">
+                    <figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_006.png" alt="+6 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_009.png" alt="+9 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_012.png" alt="+12 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_015.png" alt="+15 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_018.png" alt="+18 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_021.png" alt="+21 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_024.png" alt="+24 ur od napovedi" class="cent">
+                    </figure>
+					<!--figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_027.png" alt="+27 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_030.png" alt="+30 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_033.png" alt="+33 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_036.png" alt="+36 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_039.png" alt="+39 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_042.png" alt="+42 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_045.png" alt="+45 ur od napovedi" class="cent">
+                    </figure>
+					<figure class="image is-fullwidth">
+                        <img src="http://meteo.arso.gov.si/uploads/probase/www/model/aladin/field/as_tcc-rr_si-pda_pda_048.png" alt="+48 ur od napovedi" class="cent">
+                    </figure-->
+                </div>
+				
+				<!-- Tekst napoved -->
+                <div class="tab-pane" id="pane-4">
+					<iframe style="width:100%; height:600px;" src="http://meteo.arso.gov.si/uploads/probase/www/fproduct/text/sl/fcast_si_text.html"></iframe>
+					<iframe style="width:100%; height:250px;" src="http://meteo.arso.gov.si/uploads/probase/www/fproduct/text/sl/fcast_SLOVENIA_MOUNTAINS_d1_text.html"></iframe>
+					<iframe style="width:100%; height:250px;" src="http://meteo.arso.gov.si/uploads/probase/www/fproduct/text/sl/fcast_SLOVENIA_MOUNTAINS_d2_text.html"></iframe>
+					<iframe style="width:100%; height:250px;" src="http://meteo.arso.gov.si/uploads/probase/www/fproduct/text/sl/fcast_SI_OBALNO-KRASKA_d1_text.html"></iframe>
+					<iframe style="width:100%; height:250px;" src="http://meteo.arso.gov.si/uploads/probase/www/fproduct/text/sl/fcast_SI_OBALNO-KRASKA_d2_text.html"></iframe>
+				</div>
+				
+				<!-- Blitzortung -->
+                <div class="tab-pane" id="pane-5">
+					<figure class="image is-fullwidth">
+                        <img src="https://images.lightningmaps.org/blitzortung/europe/index.php?map=6" alt="West Europe Blitzortung" class="cent">
+                    </figure>
+				</div>
+				
+				<!-- GEFS Ensembles -->
+                <div class="tab-pane" id="pane-6">
+					<script>
+						getLocation();
+						
+						function getLocation() {
+							if (navigator.geolocation) {
+								navigator.geolocation.getCurrentPosition(showPosition);
+							}
+						}
+						function showPosition(position) {
+							console.log("POSITION SET");
+							var x = document.getElementById("gefs");
+							var img_url = "https://modeles7.meteociel.fr/modeles/gens/runs/2020082406/graphe3_1000___"+position.coords.longitude+"_"+position.coords.latitude+"_.gif";
+							x.src = img_url;
+						}
+					</script>
+					<figure class="image is-fullwidth">
+                        <img src="https://modeles7.meteociel.fr/modeles/gens/runs/2020082406/graphe3_1000___14.505751_46.056946_.gif" alt="GEFS Ensembles" class="cent" id="gefs">
+                    </figure>
+				</div>
+				
+				<!-- O strani -->
+                <div class="tab-pane" id="pane-7">
+                    <div class="content">
+                        <h1>Hello World</h1>
+                        <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
+                        <h2>Second level</h2>
+                        <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
+                        <ul>
+                            <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+                            <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+                            <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
+                            <li>Ut non enim metus.</li>
+                        </ul>
+                        <h3>Third level</h3>
+                        <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
+                        <ol>
+                            <li>Donec blandit a lorem id convallis.</li>
+                            <li>Cras gravida arcu at diam gravida gravida.</li>
+                            <li>Integer in volutpat libero.</li>
+                            <li>Donec a diam tellus.</li>
+                            <li>Aenean nec tortor orci.</li>
+                            <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
+                            <li>Vivamus maximus ultricies pulvinar.</li>
+                        </ol>
+                    <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+                    <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
+                    <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
+                    <dl>
+                        <dt>Web</dt>
+                        <dd>The part of the Internet that contains websites and web pages</dd>
+                        <dt>HTML</dt>
+                        <dd>A markup language for creating web pages</dd>
+                        <dt>CSS</dt>
+                        <dd>A technology to make HTML look better</dd>
+                    </dl>
+                    <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
+                    <h4>Fourth level</h4>
+                    <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
+                                        <pre>
+                                                                                                &lt;!DOCTYPE html&gt;
+                                                                                                &lt;html&gt;
+                                                                                                  &lt;head&gt;
+                                                                                                    &lt;title&gt;Hello World&lt;/title&gt;
+                                                                                                  &lt;/head&gt;
+                                                                                                  &lt;body&gt;
+                                                                                                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.&lt;/p&gt;
+                                                                                                  &lt;/body&gt;
+                                                                                                &lt;/html&gt;
+                    </pre>
+                    <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>One</th>
+                                <th>Two</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Three</td>
+                                <td>Four</td>
+                            </tr>
+                            <tr>
+                                <td>Five</td>
+                                <td>Six</td>
+                            </tr>
+                            <tr>
+                                <td>Seven</td>
+                                <td>Eight</td>
+                            </tr>
+                            <tr>
+                                <td>Nine</td>
+                                <td>Ten</td>
+                            </tr>
+                            <tr>
+                                <td>Eleven</td>
+                                <td>Twelve</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
+                    <h5>Fifth level</h5>
+                    <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
+                    <figure>
+                        <img src="https://bulma.io/images/placeholders/256x256.png" alt="💯">
+                        <img src="https://bulma.io/images/placeholders/256x256.png" alt="💯">
+                        <figcaption>
+                        Figure 1: Some beautiful placeholders
+                        </figcaption>
+                    </figure>
+                    <h6>Sixth level</h6>
+                    <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/tabs.js"></script>
+</body>
+</html>
