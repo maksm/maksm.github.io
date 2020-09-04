@@ -2,25 +2,28 @@ var app = angular.module('myApp', ['ngGeolocation'])
 .run(function($rootScope, $geolocation) {
     $rootScope.hribi = {}
     $geolocation.getCurrentPosition().then(function(position) {
-	console.log("Position set in init");
-        $rootScope.position = position;
+        console.log("init position: " + position);
+        $rootScope.lon = position.coords.longitude;
+        $rootScope.lat = position.coords.latitude;
     });
-});
+})
 
 app.controller('hribiCtrl', 
     function($scope, $rootScope, $http, $geolocation, csv2json) {
       $scope.hribi = {};
-      $scope.position = $rootScope.position;
       $http.get("hribi.csv")
         .then(function(response) {
             $scope.hribi = csv2json.convert(response.data);
             $rootScope.hribi = $scope.hribi;
         });
-    $geolocation.getCurrentPosition().then(function(position) {
-        console.log("Position set in ctrl");
-        $rootScope.position = position;
-	$scope.position = position;
-    });
+      $geolocation.getCurrentPosition().then(function(position) {
+          console.log("ctrl position: " + position);
+        $rootScope.lon = position.coords.longitude;
+        $rootScope.lat = position.coords.latitude;
+        $scope.lon = position.coords.longitude;
+        $scope.lat = position.coords.latitude;
+      });
+
  });
 
 app.factory('csv2json', function() {
