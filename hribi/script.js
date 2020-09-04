@@ -2,12 +2,16 @@ var app = angular.module('myApp', ['ngGeolocation'])
 .run(function($rootScope) {
     $rootScope.hribi = {}
     if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(
-            function (position) {
-                $rootScope.position = position;
-        });
-	}
-})
+    console.log("Location available.");
+    navigator.geolocation.getCurrentPosition(
+        function showPosition(position) {
+            console.log("Location set.");
+            $rootScope.position = position;
+    });
+    } else {
+        console.log("No location available.");
+    }
+});
 
 app.controller('hribiCtrl', 
     function($scope, $rootScope, $http, $geolocation, csv2json) {
