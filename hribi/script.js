@@ -2,20 +2,10 @@ var app = angular.module('myApp', ['ngGeolocation'])
 .run(function($rootScope, $geolocation) {
     $rootScope.hribi = {}
     $geolocation.getCurrentPosition().then(function(position) {
-        console.log("LOCATION")
+	console.log("Position set in init");
         $rootScope.position = position;
     });
-    if (navigator.geolocation) {
-        console.log("Location available.");
-		navigator.geolocation.getCurrentPosition(
-            function showPosition(position) {
-                console.log("Location set.");
-                $rootScope.position = position;
-        });
-	} else {
-        console.log("No location available.");
-    }
-})
+});
 
 app.controller('hribiCtrl', 
     function($scope, $rootScope, $http, $geolocation, csv2json) {
@@ -27,19 +17,10 @@ app.controller('hribiCtrl',
             $rootScope.hribi = $scope.hribi;
         });
     $geolocation.getCurrentPosition().then(function(position) {
-        console.log("LOCATION2")
+        console.log("Position set in ctrl");
         $rootScope.position = position;
+	$scope.position = position;
     });
-    if (navigator.geolocation) {
-        console.log("Location available.2");
-		navigator.geolocation.getCurrentPosition(
-            function showPosition(position) {
-                console.log("Location set2.");
-                $rootScope.position = position;
-        });
-	} else {
-        console.log("No location available2.");
-    }
  });
 
 app.factory('csv2json', function() {
