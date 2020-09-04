@@ -10,13 +10,13 @@
   </head>
 
   <body ng-controller="hribiCtrl">
-      <p ng-if="position">Trenutna pozicija: {{ position }} </p>
+      <p ng-if="lon">Trenutna pozicija: {{ lon + ', ' + lat }} </p>
       <table>
-        <tr><th>Ime</th><th>GPS lokacija</th><th ng-if="position">Oddaljenost</th></tr>
+        <tr><th>Ime</th><th>GPS lokacija</th><th ng-if="lon">Oddaljenost</th></tr>
         <tr ng-repeat="hrib in hribi">
           <td>{{ hrib['ime'] + ' (' + hrib['visina'] + 'm)'}}</td>
           <td>{{ hrib['lon'] + ", " + hrib['lat'] }}</td>
-          <td ng-if="position">{{ getDistanceCurrent(hrib['lat'], hrib['lon']) }}</td>
+          <td ng-if="lon">{{ getDistanceCurrent(hrib['lat'], hrib['lon']) }}</td>
         </tr>
       </table>
   </body>
