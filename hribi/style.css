@@ -1,0 +1,15 @@
+form {
+  position: relative;
+}
+.search__suggestion {
+  font: normal normal normal 14px/normal Arial;
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  color: #aaa;
+  z-index: -1;
+}
+input {
+  font: normal normal normal 14px/normal Arial;
+  background: transparent;
+}

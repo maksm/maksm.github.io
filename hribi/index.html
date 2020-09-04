@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ngGeolocation@0.0.7/ngGeolocation.min.js"></script>
+  </head>
+
+  <body ng-controller="hribiCtrl">
+      <p ng-if="position">Trenutna pozicija: {{ position }} </p>
+      <table>
+        <tr><th>Ime</th><th>GPS lokacija</th><th ng-if="position">Oddaljenost</th></tr>
+        <tr ng-repeat="hrib in hribi">
+          <td>{{ hrib['ime'] + ' (' + hrib['visina'] + 'm)'}}</td>
+          <td>{{ hrib['lon'] + ", " + hrib['lat'] }}</td>
+          <td ng-if="position">{{ getDistanceCurrent(hrib['lat'], hrib['lon']) }}</td>
+        </tr>
+      </table>
+  </body>
+
+</html>
