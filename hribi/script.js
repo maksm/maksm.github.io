@@ -1,17 +1,21 @@
 var app = angular.module('myApp', ['ngGeolocation'])
-.run(function($rootScope) {
+.run(function($rootScope, $geolocation) {
     $rootScope.hribi = {}
-    if (navigator.geolocation) {
-    console.log("Location available.");
-    navigator.geolocation.getCurrentPosition(
-        function showPosition(position) {
-            console.log("Location set.");
-            $rootScope.position = position;
+    $geolocation.getCurrentPosition().then(function(position) {
+        console.log("LOCATION")
+        $rootScope.position = position;
     });
-    } else {
+    if (navigator.geolocation) {
+        console.log("Location available.");
+		navigator.geolocation.getCurrentPosition(
+            function showPosition(position) {
+                console.log("Location set.");
+                $rootScope.position = position;
+        });
+	} else {
         console.log("No location available.");
     }
-});
+})
 
 app.controller('hribiCtrl', 
     function($scope, $rootScope, $http, $geolocation, csv2json) {
@@ -21,11 +25,21 @@ app.controller('hribiCtrl',
         .then(function(response) {
             $scope.hribi = csv2json.convert(response.data);
             $rootScope.hribi = $scope.hribi;
-            //$geolocation.getCurrentPosition().then(function(position) {
-            //    $rootScope.position = position;
-            //    $scope.position = position;
-         //});
         });
+    $geolocation.getCurrentPosition().then(function(position) {
+        console.log("LOCATION2")
+        $rootScope.position = position;
+    });
+    if (navigator.geolocation) {
+        console.log("Location available.2");
+		navigator.geolocation.getCurrentPosition(
+            function showPosition(position) {
+                console.log("Location set2.");
+                $rootScope.position = position;
+        });
+	} else {
+        console.log("No location available2.");
+    }
  });
 
 app.factory('csv2json', function() {
