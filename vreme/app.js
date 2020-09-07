@@ -11,7 +11,7 @@ var app = angular.module('plunker', ['bootstrap','ngGeolocation'])
 }]);
 
 
-app.controller('MainCtrl', function($scope, $location, $geolocation) {
+app.controller('MainCtrl', function($scope, $location, $geolocation, $http) {
   $scope.location = $location;
   $geolocation.getCurrentPosition().then(function(position) {
       $scope.lon = position.coords.longitude;
@@ -24,7 +24,7 @@ app.controller('MainCtrl', function($scope, $location, $geolocation) {
   });
 });
 
-app.controller("TabsCtrl", function($scope, $routeParams, $location, $http, $geolocation) {
+app.controller("TabsCtrl", function($scope, $routeParams, $location, $geolocation) {
 
   $scope.date = new Date();
   
