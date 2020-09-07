@@ -17,6 +17,11 @@ app.controller('MainCtrl', function($scope, $location, $geolocation) {
       $scope.lon = position.coords.longitude;
       $scope.lat = position.coords.latitude;
   });
+  $scope.napoved = "Napoved se ni naložila.";
+  $http.get("https://meteo.arso.gov.si/uploads/probase/www/fproduct/text/sl/fcast_si_text.html")
+    .then(function(response) {
+      $scope.napoved = response.data;
+  });
 });
 
 app.controller("TabsCtrl", function($scope, $routeParams, $location, $http, $geolocation) {
@@ -27,11 +32,6 @@ app.controller("TabsCtrl", function($scope, $routeParams, $location, $http, $geo
       $scope.lon = position.coords.longitude;
       $scope.lat = position.coords.latitude;
   });
-
-   $http.get("http://meteo.arso.gov.si/uploads/probase/www/fproduct/text/sl/fcast_si_text.html")
-      .then(function(response) {
-        $scope.napoved = response.data;
-    });
 
   //Each time controller is recreated, check tab in url
   $scope.currentTab = +$routeParams.tabId; //+ to parse to int
