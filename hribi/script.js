@@ -13,7 +13,7 @@ app.controller('hribiCtrl',
     function($scope, $rootScope, $http, $geolocation, csv2json) {
       $scope.hribi = {};
       $scope.position = $rootScope.position;
-      $http.get("hribi.csv")
+      $http.get("hribi.html")
         .then(function(response) {
             $scope.hribi = csv2json.convert(response.data);
             $rootScope.hribi = $scope.hribi;
