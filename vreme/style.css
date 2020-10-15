@@ -1,5 +1,14 @@
 /* Put your css in here */
 
-.nav-tabs.active.a {
-  font-weight: bold; 
+.nav-tabs>.active>a {
+  font-weight: bold;
+  border: 10px solid #ddd;
+}
+
+.nav-tabs>li>a {
+  font-size: large;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 30px
+  border: 10px solid transparent;
 }
