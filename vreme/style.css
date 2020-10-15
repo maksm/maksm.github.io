@@ -1,2 +1,5 @@
 /* Put your css in here */
 
+.nav-tabs.active.a {
+  font-weight: bold; 
+}
