@@ -3,12 +3,13 @@
 .nav-tabs>.active>a, .nav-tabs>.active>a:hover {
   font-weight: bold;
   border: 10px solid #ddd;
+  text-transform: uppercase;
 }
 
 .nav-tabs>li>a {
   font-size: large;
   padding-top: 20px;
-  padding-bottom: 20px;
-  line-height: 30px
+  padding-bottom: 10px;
+  line-height: 40px
   border: 10px solid transparent;
 }
