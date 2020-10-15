@@ -4,6 +4,7 @@
   font-weight: bold;
   border: 10px solid #ddd;
   text-transform: uppercase;
+  padding-top: 10px;
 }
 
 .nav-tabs>li>a {
