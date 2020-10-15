@@ -1,6 +1,6 @@
 /* Put your css in here */
 
-.nav-tabs>.active>a {
+.nav-tabs>.active>a, .nav-tabs>.active>a:hover {
   font-weight: bold;
   border: 10px solid #ddd;
 }
