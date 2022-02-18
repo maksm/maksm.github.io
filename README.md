@@ -7,4 +7,4 @@ Main frameworks: Bootstrap, AngularJS
 
 Work in progress
 
-[Vreme](/vreme/)
+[Vreme](/gredez/)
