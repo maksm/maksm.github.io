@@ -7,4 +7,4 @@ Main frameworks: Bootstrap, AngularJS
 
 Work in progress
 
-[Vreme](/gredez/)
+[Vreme](https://maksm.github.io/gredez/index.html)
